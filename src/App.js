@@ -1,9 +1,15 @@
 import "./App.css";
 
+import Title from "components/atoms/Title";
+
 function App() {
   return (
     <div>
-      <h1>CarSharing</h1>
+      <header>Nawigacja</header>
+      <main>
+        <div>CarSharing</div>
+        <Title size={60}>Wypożyczalnia samochodów CarSharing </Title>
+      </main>
     </div>
   );
 }
