@@ -1,6 +1,7 @@
 import "./App.css";
 
 import Title from "components/atoms/Title";
+import Paragraph from "components/atoms/Paragraph";
 
 function App() {
   return (
@@ -8,7 +9,7 @@ function App() {
       <header>Nawigacja</header>
       <main>
         <div>CarSharing</div>
-        <Title size={60}>Wypożyczalnia samochodów CarSharing </Title>
+        <Paragraph size="26">Paragrag</Paragraph>
       </main>
     </div>
   );
