@@ -13,14 +13,14 @@ const StyledH2 = styled.h2`
   font-family: "Roboto", sans-serif;
   color: #0c0c0c;
   letter-spacing: 5px;
-  font-weight: 600;
+  font-weight: 400;
 `;
 const StyledH3 = styled.h3`
   font-size: ${({ size }) => `${size}px`};
   font-family: "Roboto", sans-serif;
   color: #0c0c0c;
-  letter-spacing: 5px;
-  font-weight: 600;
+  letter-spacing: 3px;
+  font-weight: 400;
 `;
 
 const Title = ({ children, type = "h1", size = "54", className }) => {
