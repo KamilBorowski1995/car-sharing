@@ -1,15 +1,17 @@
 import "./App.css";
 
-import Title from "components/atoms/Title";
-import Paragraph from "components/atoms/Paragraph";
+import Nav from "components/organism/Nav";
+
+import Header from "Header";
 
 function App() {
   return (
     <div>
-      <header>Nawigacja</header>
+      <header>
+        <Nav />
+      </header>
       <main>
-        <div>CarSharing</div>
-        <Paragraph size="26">Paragrag</Paragraph>
+        <Header />
       </main>
     </div>
   );

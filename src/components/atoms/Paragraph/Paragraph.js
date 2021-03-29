@@ -5,12 +5,21 @@ const StyledParagraph = styled.p`
   font-family: "Roboto", sans-serif;
   color: #e6e6e6;
   letter-spacing: ${({ letterSpacing }) => (letterSpacing ? "5px" : "0px")};
-  font-weight: 600;
+  font-weight: 300;
 `;
 
-const Paragraph = ({ children, size, letterSpacing = false }) => {
+const Paragraph = ({
+  children,
+  size = "46",
+  letterSpacing = false,
+  className,
+}) => {
   return (
-    <StyledParagraph letterSpacing={letterSpacing} size={size}>
+    <StyledParagraph
+      className={className}
+      letterSpacing={letterSpacing}
+      size={size}
+    >
       {children}
     </StyledParagraph>
   );
