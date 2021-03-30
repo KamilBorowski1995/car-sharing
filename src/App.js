@@ -2,20 +2,24 @@ import "./App.css";
 
 import Nav from "components/organism/Nav";
 
-import Header from "Header";
-import Product from "components/organism/Product";
+import Header from "pages/Header";
+
+import Products from "pages/Products";
+import Contact from "pages/Contact";
 
 function App() {
   return (
-    <div>
+    <div id="start">
       <header>
         <Nav />
       </header>
       <main>
         <Header />
-        <Product />
-        <Product />
+        <Products />
       </main>
+      <footer>
+        <Contact />
+      </footer>
     </div>
   );
 }

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const StyledParagraph = styled.p`
   font-size: ${({ size }) => `${size}px`};
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   color: #e6e6e6;
   letter-spacing: ${({ letterSpacing }) => (letterSpacing ? "5px" : "0px")};
   font-weight: 300;

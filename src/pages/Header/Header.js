@@ -6,7 +6,7 @@ import Paragraph from "components/atoms/Paragraph";
 import BgcImage from "components/assets/images/background.jpg";
 
 const Wrapper = styled.div`
-  width: 100vw;
+  width: 100%;
   height: 95vh;
   background-image: url(${BgcImage});
   background-repeat: no-repeat;
@@ -39,7 +39,7 @@ const StyledTitle = styled(Title)`
 const StyledParagraph = styled(Paragraph)`
   margin: 30px 0;
   cursor: default;
-  transition: 0.3s linear;
+  transition: 0.15s linear;
   :hover {
     transform: scale(1.04);
   }

@@ -2,24 +2,23 @@ import styled from "styled-components";
 
 const StyledH1 = styled.h1`
   font-size: ${({ size }) => `${size}px`};
-
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   color: #e6e6e6;
   letter-spacing: 4px;
   font-weight: 400;
 `;
 const StyledH2 = styled.h2`
   font-size: ${({ size }) => `${size}px`};
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   color: #0c0c0c;
   letter-spacing: 5px;
   font-weight: 400;
 `;
 const StyledH3 = styled.h3`
   font-size: ${({ size }) => `${size}px`};
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   color: #0c0c0c;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   font-weight: 400;
 `;
 

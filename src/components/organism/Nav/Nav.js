@@ -1,21 +1,28 @@
+import { useState, useEffect } from "react";
+
 import styled from "styled-components";
 
 import logo from "components/assets/images/logo.svg";
-import Paragraph from "components/atoms/Paragraph";
+
 import Link from "components/atoms/Link";
 
 const Wrapper = styled.nav`
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   z-index: 1;
-  background-color: rgba(0, 0, 0, 0.2);
+
+  background-color: ${({ scroll }) =>
+    scroll ? "rgba(0, 0, 0, 0.8) " : "rgba(0, 0, 0, 0.2)"};
+  /* background-color: rgba(0, 0, 0, 0.2); */
 
   display: flex;
   justify-content: space-between;
   padding: 0 270px;
   color: #e6e6e6;
+
+  transition: 0.3s ease-in-out;
 `;
 
 const WrapperLogo = styled.div`
@@ -45,21 +52,46 @@ const StyledLogoText = styled.p`
 const StyledLogo = styled.img`
   padding-top: 10px;
   height: 60px;
+
+  /* height: ${({ scroll }) => (scroll ? "50px" : "60px")};
+  transition: 0.3s ease-in-out; */
 `;
 
 const Nav = () => {
+  const [scroll, setScroll] = useState(false);
+
+  function logit() {
+    if (window.pageYOffset > 50) {
+      setScroll(true);
+    } else {
+      setScroll(false);
+    }
+  }
+
+  useEffect(() => {
+    function watchScroll() {
+      window.addEventListener("scroll", logit);
+    }
+    watchScroll();
+    return () => {
+      window.removeEventListener("scroll", logit);
+    };
+  });
+
   return (
-    <Wrapper>
+    <Wrapper scroll={scroll}>
       <WrapperLogo>
-        <StyledLogo src={logo} alt="logo Car-Sharing" />
+        <StyledLogo scroll={scroll} src={logo} alt="logo Car-Sharing" />
         <StyledLogoText>Car Sharing</StyledLogoText>
       </WrapperLogo>
 
       <StyledList>
-        <Link active>Home</Link>
-        <Link>Cennik</Link>
-        <Link>Rezerwacja</Link>
-        <Link>Kontakt</Link>
+        <Link href="/#start" active>
+          Home
+        </Link>
+        <Link href="/#cennik">Cennik</Link>
+        <Link href="/#cennik">Rezerwacja</Link>
+        <Link href="/#kontakt">Kontakt</Link>
       </StyledList>
     </Wrapper>
   );

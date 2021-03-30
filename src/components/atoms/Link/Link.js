@@ -4,7 +4,7 @@ const StyledLi = styled.li`
   padding: 0 25px;
 `;
 const StyledA = styled.a`
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   color: #e6e6e6;
   font-size: 20px;
   text-decoration: none;

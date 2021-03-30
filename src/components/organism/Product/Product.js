@@ -2,8 +2,6 @@ import styled, { keyframes } from "styled-components";
 
 import Title from "components/atoms/Title";
 
-import Car from "components/assets/images/cars/yaris.png";
-
 const rubberBand = keyframes`
 from {
     transform: scale3d(1, 1, 1);
@@ -38,22 +36,33 @@ const Wrapper = styled.div`
   width: 1600px;
   background-color: #f1f1f1;
   display: grid;
-  grid-template-columns: 40% 60%;
+  grid-template-columns: 40% 55%;
+  grid-gap: 5%;
   margin: 0 auto 50px;
   padding: 30px;
+  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.2);
 `;
 
 const WrapperImageAndButton = styled.div`
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 `;
 const WrapperImage = styled.div`
   width: 100%;
-  height: 100%;
+  flex-basis: 75%;
+  background-image: url(${({ image }) => `./image/cars/${image[0]}`});
+  background-position: center;
+  background-size: 70%;
+  background-repeat: no-repeat;
   overflow: hidden;
-`;
+  text-align: center;
+  transition: 0.1s linear;
 
-const StyledImage = styled.img`
-  width: 50%;
+  :hover {
+    background-image: url(${({ image }) => `./image/cars/${image[1]}`});
+  }
 `;
 
 const StyledTableWrapper = styled.table`
@@ -81,12 +90,16 @@ const StyledTitle = styled(Title)`
 `;
 
 const StyledButton = styled.button`
-  display: inline-block;
   padding: 15px 60px;
-  background: #0079ff;
-  color: #fff;
+  background: #f1f1f1;
+  font-size: 16px;
+  font-family: "Roboto Condensed", sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: #0c0c0c;
+  border: none;
   border-radius: 5px;
-  text-decoration: none;
+  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.2);
 
   cursor: pointer;
 
@@ -99,51 +112,7 @@ const StyledButton = styled.button`
   }
 `;
 
-const productDB = {
-  name: "Yaris Comfort",
-  info: [
-    {
-      title: "Średnie zużycie paliwa",
-      description: "3.9 l/ 100 km",
-    },
-    {
-      title: "Skrzynia biegów",
-      description: "Manualna",
-    },
-    {
-      title: "Prędkość maks.",
-      description: "175km/h",
-    },
-  ],
-  cost: [
-    {
-      title: "5h",
-      description: "129 zł",
-    },
-    {
-      title: "1-2 dni",
-      description: "119 zł",
-    },
-    {
-      title: "1 tydz.",
-      description: "109 zł",
-    },
-    {
-      title: "2 tyg.",
-      description: "99 zł",
-    },
-    {
-      title: "1 mies.",
-      description: "2899 zł",
-    },
-    {
-      title: ">3 mies.",
-      description: "2599 zł",
-    },
-  ],
-};
-
-const Product = () => {
+const Product = ({ productDB }) => {
   const mapProduct = (data) => {
     const mapData = data.map(({ title, description }) => (
       <StyledTableTr>
@@ -158,9 +127,7 @@ const Product = () => {
   return (
     <Wrapper>
       <WrapperImageAndButton>
-        <WrapperImage>
-          <StyledImage src={Car} alt="zdjęcie podglądowe samochodu" />
-        </WrapperImage>
+        <WrapperImage image={productDB.photos}></WrapperImage>
         <StyledButton>Zarezerwuj</StyledButton>
       </WrapperImageAndButton>
       <div>
