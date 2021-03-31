@@ -2,6 +2,10 @@ import styled from "styled-components";
 
 const StyledLi = styled.li`
   padding: 0 25px;
+
+  @media (max-width: 1450px) {
+    padding: 0 20px;
+  }
 `;
 const StyledA = styled.a`
   font-family: "Roboto Condensed", sans-serif;
@@ -18,6 +22,18 @@ const StyledA = styled.a`
 
   :hover {
     color: white;
+  }
+
+  @media (max-width: 1450px) {
+    padding: 0 5px 5px;
+  }
+
+  @media (max-width: 992px) {
+    padding: 0 2px 5px;
+  }
+  @media (max-width: 768px) {
+  }
+  @media (max-width: 576px) {
   }
 `;
 

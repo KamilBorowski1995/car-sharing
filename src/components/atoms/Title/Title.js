@@ -6,6 +6,14 @@ const StyledH1 = styled.h1`
   color: #e6e6e6;
   letter-spacing: 4px;
   font-weight: 400;
+
+  @media (max-width: 1450px) {
+    font-size: ${({ size }) => `${size * 0.95}px`};
+  }
+
+  @media (max-width: 1200px) {
+    font-size: ${({ size }) => `${size * 0.9}px`};
+  }
 `;
 const StyledH2 = styled.h2`
   font-size: ${({ size }) => `${size}px`};
@@ -13,6 +21,14 @@ const StyledH2 = styled.h2`
   color: #0c0c0c;
   letter-spacing: 5px;
   font-weight: 400;
+
+  @media (max-width: 1450px) {
+    font-size: ${({ size }) => `${size * 0.95}px`};
+  }
+
+  @media (max-width: 1200px) {
+    font-size: ${({ size }) => `${size * 0.9}px`};
+  }
 `;
 const StyledH3 = styled.h3`
   font-size: ${({ size }) => `${size}px`};
@@ -20,6 +36,14 @@ const StyledH3 = styled.h3`
   color: #0c0c0c;
   letter-spacing: 2px;
   font-weight: 400;
+
+  @media (max-width: 1450px) {
+    font-size: ${({ size }) => `${size * 0.95}px`};
+  }
+
+  @media (max-width: 1200px) {
+    font-size: ${({ size }) => `${size * 0.9}px`};
+  }
 `;
 
 const Title = ({ children, type = "h1", size = "54", className }) => {

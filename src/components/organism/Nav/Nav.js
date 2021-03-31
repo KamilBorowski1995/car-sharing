@@ -23,6 +23,21 @@ const Wrapper = styled.nav`
   color: #e6e6e6;
 
   transition: 0.3s ease-in-out;
+
+  @media (max-width: 1450px) {
+    padding: 0 150px;
+  }
+
+  @media (max-width: 1200px) {
+    padding: 0 20px;
+  }
+
+  @media (max-width: 992px) {
+  }
+  @media (max-width: 768px) {
+  }
+  @media (max-width: 576px) {
+  }
 `;
 
 const WrapperLogo = styled.div`

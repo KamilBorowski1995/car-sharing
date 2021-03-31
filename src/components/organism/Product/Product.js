@@ -116,8 +116,8 @@ const Product = ({ productDB }) => {
   const mapProduct = (data) => {
     const mapData = data.map(({ title, description }) => (
       <StyledTableTr>
-        <StyledtableTd>{title}</StyledtableTd>{" "}
-        <StyledtableTd weight="500">{description}</StyledtableTd>
+        <StyledtableTd weight="500">{title}</StyledtableTd>{" "}
+        <StyledtableTd>{description}</StyledtableTd>
       </StyledTableTr>
     ));
 

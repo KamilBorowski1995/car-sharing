@@ -6,6 +6,14 @@ const StyledParagraph = styled.p`
   color: #e6e6e6;
   letter-spacing: ${({ letterSpacing }) => (letterSpacing ? "5px" : "0px")};
   font-weight: 300;
+
+  @media (max-width: 1450px) {
+    font-size: ${({ size }) => `${size * 0.95}px`};
+  }
+
+  @media (max-width: 1200px) {
+    font-size: ${({ size }) => `${size * 0.9}px`};
+  }
 `;
 
 const Paragraph = ({
