@@ -32,8 +32,11 @@ from {
   }
 `;
 
+const WrapperPage = styled.div`
+  padding: 0 150px;
+`;
+
 const Wrapper = styled.div`
-  width: 1600px;
   background-color: #f1f1f1;
   display: grid;
   grid-template-columns: 40% 55%;
@@ -125,20 +128,22 @@ const Product = ({ productDB }) => {
   };
 
   return (
-    <Wrapper>
-      <WrapperImageAndButton>
-        <WrapperImage image={productDB.photos}></WrapperImage>
-        <StyledButton>Zarezerwuj</StyledButton>
-      </WrapperImageAndButton>
-      <div>
-        <StyledTitle type="h3" size="50">
-          {productDB.name}
-        </StyledTitle>
-        <StyledTableWrapper>{mapProduct(productDB.info)}</StyledTableWrapper>
+    <WrapperPage>
+      <Wrapper>
+        <WrapperImageAndButton>
+          <WrapperImage image={productDB.photos}></WrapperImage>
+          <StyledButton>Zarezerwuj</StyledButton>
+        </WrapperImageAndButton>
+        <div>
+          <StyledTitle type="h3" size="50">
+            {productDB.name}
+          </StyledTitle>
+          <StyledTableWrapper>{mapProduct(productDB.info)}</StyledTableWrapper>
 
-        <StyledTableWrapper>{mapProduct(productDB.cost)}</StyledTableWrapper>
-      </div>
-    </Wrapper>
+          <StyledTableWrapper>{mapProduct(productDB.cost)}</StyledTableWrapper>
+        </div>
+      </Wrapper>
+    </WrapperPage>
   );
 };
 

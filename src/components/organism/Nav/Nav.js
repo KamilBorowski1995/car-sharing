@@ -95,7 +95,7 @@ const Nav = () => {
 
   return (
     <Wrapper scroll={scroll}>
-      <WrapperLogo>
+      <WrapperLogo onClick={() => window.scrollTo(0, 0)}>
         <StyledLogo scroll={scroll} src={logo} alt="logo Car-Sharing" />
         <StyledLogoText>Car Sharing</StyledLogoText>
       </WrapperLogo>

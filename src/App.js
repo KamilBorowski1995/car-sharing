@@ -6,6 +6,7 @@ import Header from "pages/Header";
 
 import Products from "pages/Products";
 import Contact from "pages/Contact";
+import Messager from "pages/Messager";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <footer>
         <Contact />
       </footer>
+      <Messager />
     </div>
   );
 }
