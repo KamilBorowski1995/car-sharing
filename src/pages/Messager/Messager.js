@@ -1,6 +1,8 @@
+import { useState } from "react";
 import styled, { keyframes } from "styled-components";
 
 import MessagerIcon from "components/assets/images/MessageIcon.svg";
+import ActiveChat from "./ActiveChat";
 
 const animationMessagerIconHover = keyframes`
 0% {transform: translateX(0px)}
@@ -32,7 +34,17 @@ const Wrapper = styled.div`
 `;
 
 const Messager = () => {
-  return <Wrapper></Wrapper>;
+  const [activeChat, setActiveChat] = useState(false);
+
+  return (
+    <div>
+      {activeChat ? (
+        <ActiveChat />
+      ) : (
+        <Wrapper onClick={() => setActiveChat(true)}></Wrapper>
+      )}
+    </div>
+  );
 };
 
 export default Messager;
