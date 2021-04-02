@@ -32,7 +32,8 @@ const Wrapper = styled.nav`
     padding: 0 20px;
   }
 
-  @media (max-width: 992px) {
+  @media (max-width: 900px) {
+    justify-content: center;
   }
   @media (max-width: 768px) {
   }
@@ -75,6 +76,8 @@ const StyledLogo = styled.img`
 const Nav = () => {
   const [scroll, setScroll] = useState(false);
 
+  const [mobile, setMobile] = useState(false);
+
   function logit() {
     if (window.pageYOffset > 50) {
       setScroll(true);
@@ -93,21 +96,26 @@ const Nav = () => {
     };
   });
 
+  useEffect(() => {
+    if (window.innerWidth < 900) setMobile(true);
+    else setMobile(false);
+  });
   return (
     <Wrapper scroll={scroll}>
       <WrapperLogo onClick={() => window.scrollTo(0, 0)}>
         <StyledLogo scroll={scroll} src={logo} alt="logo Car-Sharing" />
         <StyledLogoText>Car Sharing</StyledLogoText>
       </WrapperLogo>
-
-      <StyledList>
-        <Link href="/#start" active>
-          Home
-        </Link>
-        <Link href="/#cennik">Cennik</Link>
-        <Link href="/#cennik">Rezerwacja</Link>
-        <Link href="/#kontakt">Kontakt</Link>
-      </StyledList>
+      {mobile === false && (
+        <StyledList>
+          <Link href="/#start" active>
+            Home
+          </Link>
+          <Link href="/#cennik">Cennik</Link>
+          <Link href="/#cennik">Rezerwacja</Link>
+          <Link href="/#kontakt">Kontakt</Link>
+        </StyledList>
+      )}
     </Wrapper>
   );
 };

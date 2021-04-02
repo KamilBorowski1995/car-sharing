@@ -14,6 +14,12 @@ const StyledParagraph = styled.p`
   @media (max-width: 1200px) {
     font-size: ${({ size }) => `${size * 0.9}px`};
   }
+  @media (max-width: 1000px) {
+    font-size: ${({ size }) => `${size * 0.85}px`};
+  }
+  @media (max-width: 800px) {
+    font-size: ${({ size }) => `${size * 0.8}px`};
+  }
 `;
 
 const Paragraph = ({

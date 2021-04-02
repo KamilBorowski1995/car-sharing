@@ -34,6 +34,13 @@ from {
 
 const WrapperPage = styled.div`
   padding: 0 150px;
+
+  @media (max-width: 1215px) {
+    padding: 0 50px;
+  }
+  @media (max-width: 1000px) {
+    padding: 0;
+  }
 `;
 
 const Wrapper = styled.div`
@@ -44,6 +51,11 @@ const Wrapper = styled.div`
   margin: 0 auto 50px;
   padding: 30px;
   box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.2);
+
+  @media (max-width: 1000px) {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
 `;
 
 const WrapperImageAndButton = styled.div`
@@ -51,6 +63,10 @@ const WrapperImageAndButton = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: 1000px) {
+    order: 2;
+  }
 `;
 const WrapperImage = styled.div`
   width: 100%;
@@ -86,6 +102,17 @@ const StyledtableTd = styled.td`
   color: #0c0c0c;
   font-weight: ${({ weight }) => (weight ? `${weight}` : "300")};
   margin: 5px 0;
+
+  @media (max-width: 1100px) {
+    font-size: 18px;
+  }
+
+  @media (max-width: 1000px) {
+    font-size: 16px;
+  }
+  @media (max-width: 1800px) {
+    font-size: 14px;
+  }
 `;
 
 const StyledTitle = styled(Title)`

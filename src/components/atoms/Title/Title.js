@@ -14,6 +14,12 @@ const StyledH1 = styled.h1`
   @media (max-width: 1200px) {
     font-size: ${({ size }) => `${size * 0.9}px`};
   }
+  @media (max-width: 1000px) {
+    font-size: ${({ size }) => `${size * 0.85}px`};
+  }
+  @media (max-width: 800px) {
+    font-size: ${({ size }) => `${size * 0.8}px`};
+  }
 `;
 const StyledH2 = styled.h2`
   font-size: ${({ size }) => `${size}px`};
@@ -29,6 +35,12 @@ const StyledH2 = styled.h2`
   @media (max-width: 1200px) {
     font-size: ${({ size }) => `${size * 0.9}px`};
   }
+  @media (max-width: 1000px) {
+    font-size: ${({ size }) => `${size * 0.85}px`};
+  }
+  @media (max-width: 800px) {
+    font-size: ${({ size }) => `${size * 0.8}px`};
+  }
 `;
 const StyledH3 = styled.h3`
   font-size: ${({ size }) => `${size}px`};
@@ -43,6 +55,12 @@ const StyledH3 = styled.h3`
 
   @media (max-width: 1200px) {
     font-size: ${({ size }) => `${size * 0.9}px`};
+  }
+  @media (max-width: 1000px) {
+    font-size: ${({ size }) => `${size * 0.85}px`};
+  }
+  @media (max-width: 800px) {
+    font-size: ${({ size }) => `${size * 0.8}px`};
   }
 `;
 

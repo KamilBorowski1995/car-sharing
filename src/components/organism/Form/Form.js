@@ -9,6 +9,14 @@ const Wrapper = styled.div`
     "name email"
     "message message"
     ". button";
+
+  @media (max-width: 1000px) {
+    grid-template-areas:
+      "name"
+      "email"
+      "message "
+      "button";
+  }
 `;
 
 const StyledButton = styled.button`

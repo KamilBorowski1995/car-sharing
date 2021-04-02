@@ -3,8 +3,6 @@ import Title from "components/atoms/Title";
 import Form from "components/organism/Form";
 import styled from "styled-components";
 
-import IconFacebook from "components/assets/images/iconFb.svg";
-import IconInstagram from "components/assets/images/iconInsta.svg";
 import { ReactComponent as LogoInsta } from "components/assets/images/iconInsta.svg";
 import { ReactComponent as LogoFace } from "components/assets/images/iconFb.svg";
 
@@ -19,9 +17,26 @@ const Wrapper = styled.div`
   grid-template-columns: 1fr 1fr;
   padding: 0 50px;
   margin: 0 auto;
+
+  @media (max-width: 1500px) {
+    width: 90vw;
+  }
+  @media (max-width: 1200px) {
+    width: 100vw;
+  }
+
+  @media (max-width: 1000px) {
+    width: 100vw;
+    grid-template-columns: 1fr;
+    padding: 0 25px;
+  }
 `;
 
-const StyledQuestionsContact = styled.div``;
+const StyledQuestionsContact = styled.div`
+  @media (max-width: 1000px) {
+    text-align: center;
+  }
+`;
 
 const StyledParagraph = styled(Paragraph)`
   color: #373738 !important;
@@ -33,6 +48,10 @@ const WrapperContactData = styled.div`
   display: flex;
 
   margin-top: 50px;
+
+  @media (max-width: 1000px) {
+    width: 100%;
+  }
 `;
 
 const StyledContactMailAndPhone = styled(StyledParagraph)`
@@ -43,16 +62,12 @@ const StyledContactMailAndPhone = styled(StyledParagraph)`
 
 const WrapperIcon = styled.div`
   margin-top: 40px;
-`;
 
-const StyledIcon = styled.img`
-  width: 50px;
-  margin-right: 40px;
-  cursor: pointer;
-
-  transition: 0.2s ease-in-out;
-  :hover {
-    transform: scale(1.05);
+  @media (max-width: 1000px) {
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+    margin: 40px auto 20px;
   }
 `;
 
@@ -69,6 +84,10 @@ const StyledSvgInsta = styled(LogoInsta)`
       fill: #808080;
     }
   }
+
+  @media (max-width: 1000px) {
+    margin-right: 0px;
+  }
 `;
 
 const StyledSvgFace = styled(LogoFace)`
@@ -83,6 +102,9 @@ const StyledSvgFace = styled(LogoFace)`
     path {
       fill: #808080;
     }
+  }
+  @media (max-width: 1000px) {
+    margin-right: 0px;
   }
 `;
 

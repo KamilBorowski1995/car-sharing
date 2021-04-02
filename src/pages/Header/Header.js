@@ -31,6 +31,15 @@ const TextWrapper = styled.div`
   top: 50%;
   right: 50px;
   transform: translateY(-50%);
+
+  @media (max-width: 900px) {
+    width: 90%;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    right: auto;
+    transform: translate(-50%, -50%);
+  }
 `;
 
 const StyledTitle = styled(Title)`
@@ -49,6 +58,10 @@ const StyledBar = styled.div`
   width: 260px;
   height: 4px;
   background-color: #e6e6e6;
+
+  @media (max-width: 900px) {
+    display: none;
+  }
 `;
 
 const Header = () => {

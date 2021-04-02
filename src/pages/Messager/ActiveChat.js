@@ -1,5 +1,7 @@
-import { useState, useEffect, useRef, useContext } from "react";
+import { useState, useEffect, useRef } from "react";
 import styled, { keyframes } from "styled-components";
+
+import IconArrow from "components/assets/images/arrow.svg";
 
 const animateOpenChat = keyframes`
 0% {transform: translateY(100%)}
@@ -53,17 +55,17 @@ const StyledMessagesWrapper = styled.div`
   }
 
   ::-webkit-scrollbar-track {
-    background: #eff9ff;
+    background: #f6f6f6;
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #74b9ff;
+    background: #e5e3e8;
     border-radius: 5px;
     width: 2px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: #26468b;
+    background: #e6e4e8;
   }
 `;
 
@@ -92,7 +94,14 @@ const StyledMessage = styled.p`
     type === "worker" ? "2px auto 0 5px " : "2px 5px 0 auto"};
 `;
 
-const ActiveChat = () => {
+const StyledButton = styled.button`
+  background-image: url(${IconArrow});
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+`;
+
+const ActiveChat = ({ onClickClosed }) => {
   const [messages, setMessages] = useState([
     {
       id: 1,
@@ -126,11 +135,43 @@ const ActiveChat = () => {
 
   const sendMessage = (e) => {
     e.preventDefault();
+    if (messageInput !== "") {
+      const newMessage = {
+        id: messages.length,
+        type: "user",
+        message: e.target[0].value,
+      };
+
+      setMessages([...messages, newMessage]);
+
+      setMessageInput("");
+    }
   };
 
   return (
     <WrapperOpenChat>
-      <StyledTitle>Chat</StyledTitle>
+      <div>
+        <StyledTitle>Chat</StyledTitle>
+        <div
+          style={{
+            position: "absolute",
+            right: "10px",
+            top: "3px",
+
+            cursor: "pointer",
+            borderRadius: "50%",
+            backgroundColor: "#f6f6f6",
+            width: "25px",
+            height: "25px",
+            textAlign: "center",
+            lineHeight: "25px",
+            transition: "0.3s linear",
+          }}
+          onClick={onClickClosed}
+        >
+          X
+        </div>
+      </div>
 
       <WrapperActiveChat>
         <StyledMessagesWrapper ref={refMessagesWrapper}>
@@ -142,7 +183,7 @@ const ActiveChat = () => {
             value={messageInput}
             onChange={(e) => setMessageInput(e.target.value)}
           />
-          <button>Wyślij</button>
+          <StyledButton></StyledButton>
         </WrapperInput>
       </WrapperActiveChat>
     </WrapperOpenChat>

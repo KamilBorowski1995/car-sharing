@@ -31,15 +31,26 @@ const Wrapper = styled.div`
   :hover {
     animation: ${animationMessagerIconHover} 0.4s ease-in-out;
   }
+
+  @media (max-width: 1000px) {
+    width: 100px;
+    height: 100px;
+    right: 10px;
+    bottom: 20px;
+  }
 `;
 
 const Messager = () => {
   const [activeChat, setActiveChat] = useState(false);
 
+  const handleClosedChat = () => {
+    setActiveChat(false);
+  };
+
   return (
     <div>
       {activeChat ? (
-        <ActiveChat />
+        <ActiveChat onClickClosed={handleClosedChat} />
       ) : (
         <Wrapper onClick={() => setActiveChat(true)}></Wrapper>
       )}
