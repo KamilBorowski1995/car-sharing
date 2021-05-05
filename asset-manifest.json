@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/car-sharing/static/css/main.cbf49088.chunk.css",
-    "main.js": "/car-sharing/static/js/main.6cee9e56.chunk.js",
-    "main.js.map": "/car-sharing/static/js/main.6cee9e56.chunk.js.map",
+    "main.js": "/car-sharing/static/js/main.df133328.chunk.js",
+    "main.js.map": "/car-sharing/static/js/main.df133328.chunk.js.map",
     "runtime-main.js": "/car-sharing/static/js/runtime-main.76981da1.js",
     "runtime-main.js.map": "/car-sharing/static/js/runtime-main.76981da1.js.map",
     "static/js/2.ef3797f6.chunk.js": "/car-sharing/static/js/2.ef3797f6.chunk.js",
@@ -13,14 +13,17 @@
     "static/media/MessageIcon.2d3cb2f8.svg": "/car-sharing/static/media/MessageIcon.2d3cb2f8.svg",
     "static/media/arrow.e09b7b14.svg": "/car-sharing/static/media/arrow.e09b7b14.svg",
     "static/media/background.0b3a2b00.jpg": "/car-sharing/static/media/background.0b3a2b00.jpg",
+    "static/media/corolla.2a2d82c6.png": "/car-sharing/static/media/corolla.2a2d82c6.png",
+    "static/media/corolla2.c636a267.png": "/car-sharing/static/media/corolla2.c636a267.png",
     "static/media/iconFb.ce9a6eb9.svg": "/car-sharing/static/media/iconFb.ce9a6eb9.svg",
     "static/media/iconInsta.2c470562.svg": "/car-sharing/static/media/iconInsta.2c470562.svg",
-    "static/media/logo.7853a121.svg": "/car-sharing/static/media/logo.7853a121.svg"
+    "static/media/logo.7853a121.svg": "/car-sharing/static/media/logo.7853a121.svg",
+    "static/media/yaris.62429345.png": "/car-sharing/static/media/yaris.62429345.png"
   },
   "entrypoints": [
     "static/js/runtime-main.76981da1.js",
     "static/js/2.ef3797f6.chunk.js",
     "static/css/main.cbf49088.chunk.css",
-    "static/js/main.6cee9e56.chunk.js"
+    "static/js/main.df133328.chunk.js"
   ]
 }
